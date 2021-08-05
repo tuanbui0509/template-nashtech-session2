@@ -2,7 +2,7 @@ import React from 'react'
 import { Table } from 'reactstrap';
 import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
 import { IoCloseSharp } from "@react-icons/all-files/io5/IoCloseSharp";
-import {MdSettingsBackupRestore} from "@react-icons/all-files/"
+// import {MdSettingsBackupRestore} from "@react-icons/all-files/"
 import './Home.css'
 function Home() {
   return (
@@ -35,10 +35,10 @@ function Home() {
 
                 <FaCheck />
               </a>
-              <a>
+              {/* <a>
 
                 <MdSettingsBackupRestore />
-              </a>
+              </a> */}
             </td>
           </tr>
         </tbody>
