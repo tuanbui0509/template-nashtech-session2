@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+            "staffcode": 1,
+            "fullname": "Sebastian",
+            "username": "Eschweiler",
+            "joineddate": "1/1/2010",
+            "type": "Staff"
+        },
+        {
+            "staffcode": 2,
+            "fullname": "asdfsdf",
+            "username": "Eschweiler",
+            "joineddate": "1/1/2010",
+            "type": "Staff"
+        }, {
+            "staffcode": 3,
+            "fullname": "uiouo",
+            "username": "Eschweiler",
+            "joineddate": "1/1/2010",
+            "type": "Staff"
+        }, {
+            "staffcode": 4,
+            "fullname": "rtwewer",
+            "username": "Eschweiler",
+            "joineddate": "1/1/2010",
+            "type": "Staff"
+        }
+    ]
+}

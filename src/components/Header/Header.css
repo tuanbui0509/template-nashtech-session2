@@ -20,3 +20,12 @@
 .header-right button:hover {
     background: transparent;
 }
+
+.header-logo{
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-logo:hover{
+    color: black;
+}

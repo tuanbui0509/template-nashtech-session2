@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import './Header.css'
 const Header = (props) => {
@@ -12,7 +13,9 @@ const Header = (props) => {
             <Container>
 
                 <Row >
-                    <Col xs="6">Home</Col>
+                    <Col xs="6">
+                        <Link to='/' className='header-logo'>Home</Link>
+                    </Col>
                     <Col xs="6" className="header-right">
                         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
                             <DropdownToggle caret>

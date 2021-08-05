@@ -3,3 +3,17 @@
     cursor: pointer;
     margin-right: 1rem;
 }
+.icon-nash--red{
+    color: red!important;
+}
+.icon-nash--blue{
+    color: blue!important;
+}
+.icon-nash--black{
+    color: black!important;
+}
+
+.icon-nash--disabled{
+    cursor: not-allowed;
+    color: rgb(194, 194, 194)!important;
+}

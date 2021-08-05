@@ -1,13 +1,13 @@
 import React from 'react'
 import { Table } from 'reactstrap';
-import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
+import { BsCheck } from "@react-icons/all-files/bs/BsCheck";
 import { IoCloseSharp } from "@react-icons/all-files/io5/IoCloseSharp";
-// import {MdSettingsBackupRestore} from "@react-icons/all-files/"
+import { MdSettingsBackupRestore } from "@react-icons/all-files/md/MdSettingsBackupRestore"
 import './Home.css'
 function Home() {
   return (
     <div className="home">
-      <h5>My Assignment</h5>
+      <h5 className="right-title">My Assignment</h5>
       <Table>
         <thead>
           <tr>
@@ -27,18 +27,17 @@ function Home() {
             <td>@mdo</td>
             <td>@mdo</td>
             <td>
-              <a className='icon-nash'>
+              <span className='icon-nash icon-nash--red'>
 
                 <IoCloseSharp />
-              </a>
-              <a className='icon-nash'>
+              </span>
+              <span className='icon-nash icon-nash--black'>
 
-                <FaCheck />
-              </a>
-              {/* <a>
-
+                <BsCheck />
+              </span>
+              <span className='icon-nash icon-nash--blue'>
                 <MdSettingsBackupRestore />
-              </a> */}
+              </span>
             </td>
           </tr>
         </tbody>
