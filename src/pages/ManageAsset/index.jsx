@@ -2,6 +2,8 @@ import React from "react";
 import { Table } from "reactstrap";
 import { IoMdCreate } from "@react-icons/all-files/io/IoMdCreate";
 import { IoIosCloseCircleOutline } from "@react-icons/all-files/io/IoIosCloseCircleOutline";
+import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
 import {
   Col,
   Row,
@@ -21,7 +23,7 @@ function ManageAsset() {
           <InputGroup>
             <Input placeholder="State" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+            <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -29,7 +31,7 @@ function ManageAsset() {
           <InputGroup>
             <Input placeholder="Category" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+            <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -37,7 +39,7 @@ function ManageAsset() {
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+            <InputGroupText className="right__icon"><AiOutlineSearch /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>

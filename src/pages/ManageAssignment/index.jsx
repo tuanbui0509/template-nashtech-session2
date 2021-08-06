@@ -3,6 +3,10 @@ import { Table } from "reactstrap";
 import { IoMdCreate } from "@react-icons/all-files/io/IoMdCreate";
 import { IoIosCloseCircleOutline } from "@react-icons/all-files/io/IoIosCloseCircleOutline";
 import { MdSettingsBackupRestore } from "@react-icons/all-files/md/MdSettingsBackupRestore";
+import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
+import { AiFillCalendar } from "@react-icons/all-files/ai/AiFillCalendar";
+
 import {
   Col,
   Row,
@@ -22,7 +26,8 @@ function ManageAssignment() {
           <InputGroup>
             <Input placeholder="State" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
+
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -30,7 +35,8 @@ function ManageAssignment() {
           <InputGroup>
             <Input placeholder="Assigned Date" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiFillCalendar /></InputGroupText>
+
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -38,7 +44,8 @@ function ManageAssignment() {
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiOutlineSearch /></InputGroupText>
+
             </InputGroupAddon>
           </InputGroup>
         </Col>

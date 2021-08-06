@@ -11,7 +11,7 @@ function ManageUser() {
 
     useEffect(() => {
         async function fetchUsers() {
-            const res = await apiCaller('users ', 'GET', null);
+            const res = await apiCaller('users', 'GET', null);
             dispatch({ type: action.FETCH_USERS, payload: res });
         }
         fetchUsers()

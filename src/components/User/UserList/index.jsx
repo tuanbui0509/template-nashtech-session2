@@ -1,4 +1,7 @@
 import React from "react";
+import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
+
 import {
   Col,
   Row,
@@ -19,8 +22,8 @@ function UserList(props) {
         <Col md={2}>
           <InputGroup>
             <Input placeholder="State" />
-            <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+            <InputGroupAddon addonType="append" >
+              <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -28,7 +31,7 @@ function UserList(props) {
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiOutlineSearch/></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>

@@ -2,6 +2,12 @@ import React from "react";
 import { Table } from "reactstrap";
 import { BsCheck } from "@react-icons/all-files/bs/BsCheck";
 import { IoCloseSharp } from "@react-icons/all-files/io5/IoCloseSharp";
+import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
+import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
+import { AiFillCalendar } from "@react-icons/all-files/ai/AiFillCalendar";
+
+
+
 import {
   Col,
   Row,
@@ -21,7 +27,7 @@ function Request() {
           <InputGroup>
             <Input placeholder="State" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -29,7 +35,7 @@ function Request() {
           <InputGroup>
             <Input placeholder="Assigned Date" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiFillCalendar /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -37,7 +43,7 @@ function Request() {
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText>@</InputGroupText>
+              <InputGroupText className="right__icon"><AiOutlineSearch /></InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
