@@ -1,6 +1,9 @@
 import React from "react";
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
+import { IoMdCreate } from "@react-icons/all-files/io/IoMdCreate";
+import { IoIosCloseCircleOutline } from "@react-icons/all-files/io/IoIosCloseCircleOutline";
+import { Link } from "react-router-dom";
 
 import {
   Col,
@@ -19,24 +22,42 @@ function UserList(props) {
     <div>
       <h5 className="right-title">User List</h5>
       <Row from>
-        <Col md={2}>
+        <Col md={3}>
           <InputGroup>
-            <Input placeholder="State" />
-            <InputGroupAddon addonType="append" >
-              <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
-            </InputGroupAddon>
+            <select
+              className="custom-select custom-select-lg mb-3"
+              className="form-control"
+            >
+              <option selected>Type</option>
+              <option value={0}></option>
+              <option value={1}>Staff</option>
+              <option value={2}>Customer</option>
+            </select>
+
+            <InputGroupText className="right__icon">
+              <AiFillFilter />
+            </InputGroupText>
           </InputGroup>
         </Col>
-        <Col md={4}>
+        {/* <InputGroupText className="right__icon">
+                <AiFillFilter />
+              </InputGroupText> */}
+        <Col md={3}>
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText className="right__icon"><AiOutlineSearch/></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiOutlineSearch />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
-        <Col md={4}>
-          <Button color="danger">Create New User</Button>
+        <Col md={6} className="text-right">
+          <Button color="danger">
+            <Link to="/createuser" className="UserIcon">
+              Create New User
+            </Link>
+          </Button>
         </Col>
       </Row>
       <Table>
@@ -50,7 +71,26 @@ function UserList(props) {
             <th></th>
           </tr>
         </thead>
-        <tbody>{props.children}</tbody>
+        {/* <tbody>{props.children}</tbody> */}
+        <tbody>
+          <tr>
+            <td>MO100005</td>
+            <td>Monitor Dell UltraSharp</td>
+            <td>yentth</td>
+            <td>15/03/2019</td>
+            <td>Accepted</td>
+            <td>
+              <span className="icon-nash icon-nash--black">
+                <Link to="/edituser">
+                  <IoMdCreate />
+                </Link>
+              </span>
+              <span className="icon-nash icon-nash--red">
+                <IoIosCloseCircleOutline />
+              </span>
+            </td>
+          </tr>
+        </tbody>
       </Table>
     </div>
   );

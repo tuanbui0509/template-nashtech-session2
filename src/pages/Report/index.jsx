@@ -14,8 +14,8 @@ function Report() {
   return (
     <div>
       <h5 className="right-title">Report</h5>
-      <Row from>
-        <Col md={2}>
+      <Row from className='text-right'>
+        <Col md={12}>
           <Button color="danger">Export</Button>
         </Col>
       </Row>

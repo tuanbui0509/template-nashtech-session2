@@ -7,16 +7,16 @@ import UserList from '../../components/User/UserList'
 import UserItem from '../../components/User/UserItem'
 function ManageUser() {
     const users = useSelector(state => state.users)
-    const dispatch = useDispatch()
+    // const dispatch = useDispatch()
 
-    useEffect(() => {
-        async function fetchUsers() {
-            const res = await apiCaller('users', 'GET', null);
-            dispatch({ type: action.FETCH_USERS, payload: res });
-        }
-        fetchUsers()
-    }, [])
-    console.log(users);
+    // useEffect(() => {
+    //     async function fetchUsers() {
+    //         const res = await apiCaller('users', 'GET', null);
+    //         dispatch({ type: action.FETCH_USERS, payload: res });
+    //     }
+    //     fetchUsers()
+    // }, [])
+    // console.log(users);
 
     const showUsers = () => {
         let result = null

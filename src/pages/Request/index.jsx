@@ -6,8 +6,6 @@ import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
 import { AiFillCalendar } from "@react-icons/all-files/ai/AiFillCalendar";
 
-
-
 import {
   Col,
   Row,
@@ -23,27 +21,48 @@ function Request() {
     <div>
       <h5 className="right-title">Request List</h5>
       <Row from>
-        <Col md={2}>
+        <Col md={3}>
           <InputGroup>
-            <Input placeholder="State" />
+            <select
+              className="custom-select custom-select-lg mb-3"
+              className="form-control"
+            >
+              <option selected>State</option>
+
+              <option value={1}>Accepted</option>
+              <option value={2}>Waiting for acceptance</option>
+            </select>
+
             <InputGroupAddon addonType="append">
-              <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiFillFilter />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
         <Col md={3}>
           <InputGroup>
-            <Input placeholder="Assigned Date" />
+            <input
+              type="date"
+              className="form-control "
+              id="AssignedDate"
+              name="AssignedDate"
+            />
+
             <InputGroupAddon addonType="append">
-              <InputGroupText className="right__icon"><AiFillCalendar /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiFillCalendar />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
-        <Col md={4}>
+        <Col md={4} className="margin-left">
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-              <InputGroupText className="right__icon"><AiOutlineSearch /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiOutlineSearch />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>

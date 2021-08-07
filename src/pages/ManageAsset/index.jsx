@@ -4,12 +4,12 @@ import { IoMdCreate } from "@react-icons/all-files/io/IoMdCreate";
 import { IoIosCloseCircleOutline } from "@react-icons/all-files/io/IoIosCloseCircleOutline";
 import { AiOutlineSearch } from "@react-icons/all-files/ai/AiOutlineSearch";
 import { AiFillFilter } from "@react-icons/all-files/ai/AiFillFilter";
+import { Link } from "react-router-dom";
 import {
   Col,
   Row,
   Button,
   InputGroupText,
-  FormGroup,
   InputGroupAddon,
   Input,
   InputGroup,
@@ -19,32 +19,60 @@ function ManageAsset() {
     <div>
       <h5 className="right-title">Asset List</h5>
       <Row from>
-        <Col md={2}>
+        <Col md={3}>
           <InputGroup>
-            <Input placeholder="State" />
+            <select
+              className="custom-select custom-select-lg mb-3"
+              className="form-control"
+            >
+              <option selected>State</option>
+              <option value={0}></option>
+              <option value={1}>Available</option>
+              <option value={2}>Not Available</option>
+            </select>
+
             <InputGroupAddon addonType="append">
-            <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiFillFilter />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <InputGroup>
-            <Input placeholder="Category" />
+            <select
+              className="custom-select custom-select-lg mb-3"
+              className="form-control"
+            >
+              <option selected>Category</option>
+              <option value={0}></option>
+              <option value={1}>Laptop</option>
+              <option value={2}>Monitor</option>
+            </select>
+
             <InputGroupAddon addonType="append">
-            <InputGroupText className="right__icon"><AiFillFilter /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiFillFilter />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
-        <Col md={4}>
+        <Col md={3}>
           <InputGroup>
             <Input placeholder="Search" />
             <InputGroupAddon addonType="append">
-            <InputGroupText className="right__icon"><AiOutlineSearch /></InputGroupText>
+              <InputGroupText className="right__icon">
+                <AiOutlineSearch />
+              </InputGroupText>
             </InputGroupAddon>
           </InputGroup>
         </Col>
-        <Col md={4}>
-          <Button color="danger">Create New User</Button>
+        <Col md={3} className="text-right">
+          <Button color="danger">
+            <Link to="/createassets" className="UserIcon">
+              Create New Assets
+            </Link>
+          </Button>
         </Col>
       </Row>
       <Table>
@@ -65,7 +93,9 @@ function ManageAsset() {
             <td>Available</td>
             <td>
               <span className="icon-nash icon-nash--black">
-                <IoMdCreate />
+                <Link to="/editassets">
+                  <IoMdCreate />
+                </Link>
               </span>
               <span className="icon-nash icon-nash--red">
                 <IoIosCloseCircleOutline />
